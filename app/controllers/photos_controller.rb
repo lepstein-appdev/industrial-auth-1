@@ -7,6 +7,8 @@ class PhotosController < ApplicationController
     if @photo.owner != current_user
       redirect_back fallback_location: root_path, alert: "Nice try, suckah"
     end
+  end
+  
 
   # GET /photos or /photos.json
   def index
